@@ -27,8 +27,8 @@
 <script type="text/javascript">
     $(document).ready(function () {
         load_data();
-
-        function load_data() {
+    });
+    function load_data() {
             $.ajax({
                 url: "load_data.php",
                 method: "POST",
@@ -38,8 +38,6 @@
                 }
             })
         }
-    });
-
     $(document).on("click", ".delete", function () {
         var user_id = $(this).attr("id");
         var action = "Delete";
@@ -48,9 +46,8 @@
                 url: "delete_user.php",
                 method: "POST",
                 data: {user_id: user_id, action: action},
+                success:load_data
             })
-            window.location.reload();
-
         }
     })
 

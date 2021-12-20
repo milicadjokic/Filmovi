@@ -5,8 +5,7 @@ if(isset($_POST['add_user'])){
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
     $email = $_POST['email'];
-
-   $user = new User($first_name, $last_name, $email);
+   $user = new User();
 
    $user->addUser($first_name, $last_name, $email);
 }
@@ -33,7 +32,7 @@ if(isset($_POST['add_user'])){
                 </a>
                 <h4 class="text-center my-2">Add new User</h4>
 
-                <form method="post">
+                <form  method="post">
                     <label>First name</label>
                     <input type="text" name="first_name" class="form-control" autocomplete="off" required>
 

@@ -9,11 +9,11 @@ class Film extends Database
 
         $result = $this->connect()->query($sql);
         if ($result) {
-            echo "<script>('You have successfully add new user')</script>";
+            echo "<script>('You have successfully add new film')</script>";
 
             header("Location:films.php?id=$user_id");
         } else {
-            echo "<script>('Failed to add new user')</script>";
+            echo "<script>('Failed to add new film')</script>";
         }
     }
 
@@ -44,7 +44,7 @@ class Film extends Database
         if ($result) {
             header("Location:index.php");
         } else {
-            echo "Failed to edit new user";
+            echo "Failed to delete film";
         }
 
     }

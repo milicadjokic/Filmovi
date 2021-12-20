@@ -1,7 +1,9 @@
 <?php
 include('User.php');
-$search = ($_POST['search']);
+$search = $_POST['search'];
 $users = new User();
+
+
 
 ?>
 <head>
@@ -15,7 +17,6 @@ $users = new User();
 <a href='index.php'>
     <button class='btn btn-success my-3'>Home page</button>
 </a>
+<?php echo $users->searchUsers($search) ?>
 </body>
-<?php while($rows = $users->searchUsers($search)): ?>
 
-<?php endwhile; ?>

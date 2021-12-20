@@ -1,6 +1,6 @@
 <?php
 include("User.php");
 
-$users = new User();
-$users->getAllUsers();
+$user = new User();
+echo $user->getAllUsers();
 
